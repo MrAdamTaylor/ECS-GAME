@@ -6,20 +6,17 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-public static class GameComponentsLookup {
+public static class InputComponentsLookup {
 
-    public const int Id = 0;
-    public const int WorldPosition = 1;
 
-    public const int TotalComponents = 2;
+
+    public const int TotalComponents = 0;
 
     public static readonly string[] componentNames = {
-        "Id",
-        "WorldPosition"
+
     };
 
     public static readonly System.Type[] componentTypes = {
-        typeof(Code.Gameplay.Common.Id),
-        typeof(Code.Gameplay.Common.WorldPosition)
+
     };
 }
