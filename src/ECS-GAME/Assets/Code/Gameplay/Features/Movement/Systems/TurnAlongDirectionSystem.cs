@@ -18,8 +18,9 @@ namespace Code.Gameplay.Features.Movement.Systems
 
         public void Execute()
         {
-            foreach (GameEntity mover in _movers.GetEntities())
+            for (int i = 0; i < _movers.count; i++)
             {
+                GameEntity mover = _movers.GetEntities()[i];
                 var localScaleX = Mathf.Abs(mover.SpriteRenderer.transform.localScale.x);
                 mover.SpriteRenderer.transform.SetScaleX(localScaleX * FaceDirection(mover));
             }

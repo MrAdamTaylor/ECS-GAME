@@ -17,8 +17,9 @@ namespace Code.Gameplay.Input.Systems
 
         public void Execute()
         {
-            foreach (var input in _inputs.GetEntities())
+            for (int i = 0; i < _inputs.count; i++)
             {
+                var input = _inputs.GetEntities()[i];
                 if (_inputService.HasAxisInput()) 
                     input.ReplaceAxisInput(new Vector2(_inputService.GetHorizontalAxis(), _inputService.GetVerticalAxis()));
                 else if(input.hasAxisInput)

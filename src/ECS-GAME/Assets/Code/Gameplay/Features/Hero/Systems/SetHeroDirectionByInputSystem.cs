@@ -15,13 +15,17 @@ namespace Code.Gameplay.Features.Hero.Systems
 
         public void Execute()
         {
-            foreach (GameEntity input in _inputs)
-            foreach (GameEntity hero in _heroes)
+            for (int i = 0; i < _inputs.count; i++)
             {
-                hero.isMoving = input.hasAxisInput;
+                GameEntity input = _inputs.GetEntities()[i];
+                for (int j = 0; j < _heroes.count; j++)
+                {
+                    GameEntity hero = _heroes.GetEntities()[j];
+                    hero.isMoving = input.hasAxisInput;
                 
-                if(input.hasAxisInput)
-                    hero.ReplaceDirection(input.axisInput.Value.normalized);
+                    if(input.hasAxisInput)
+                        hero.ReplaceDirection(input.axisInput.Value.normalized);
+                }
             }
         }
     }

@@ -15,8 +15,9 @@ namespace Code.Gameplay.Features.Movement.Systems
 
         public void Execute()
         {
-            foreach (GameEntity mover in _movers.GetEntities())
+            for (int i = 0; i < _movers.count; i++)
             {
+                GameEntity mover = _movers.GetEntities()[i];
                 mover.Transform.position = mover.WorldPosition;
             }
         }

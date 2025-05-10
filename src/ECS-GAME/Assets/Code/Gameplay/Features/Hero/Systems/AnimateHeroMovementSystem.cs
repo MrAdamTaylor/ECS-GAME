@@ -13,8 +13,9 @@ namespace Code.Gameplay.Features.Hero.Systems
 
         public void Execute()
         {
-            foreach (GameEntity hero in _heroes)
+            for (int i = 0; i < _heroes.count; i++)
             {
+                GameEntity hero = _heroes.GetEntities()[i];
                 if(hero.isMoving)
                     hero.HeroAnimator.PlayMove();
                 else

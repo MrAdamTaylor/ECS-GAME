@@ -45848,6 +45848,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: goblin_torch_blue
       objectReference: {fileID: 0}
+    - target: {fileID: 5616006284858172826, guid: 5aa0f6aecef0da643b3ff98e1dc91c2e, type: 3}
+      propertyPath: EnemyAnimator
+      value: 
+      objectReference: {fileID: 1713380712}
+    - target: {fileID: 5616006284858172826, guid: 5aa0f6aecef0da643b3ff98e1dc91c2e, type: 3}
+      propertyPath: PlayerTransform
+      value: 
+      objectReference: {fileID: 1884382397}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -45890,6 +45898,22 @@ Transform:
   - {fileID: 1632601165}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1713380712 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 357553608417064001, guid: 5aa0f6aecef0da643b3ff98e1dc91c2e, type: 3}
+  m_PrefabInstance: {fileID: 1584376555}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d936e6fa230a4a38a53ff6ae046901e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1884382397 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8386491362069985314, guid: a4046c9821b644c4686c4e6d9653eb08, type: 3}
+  m_PrefabInstance: {fileID: 1421664099}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2090599417
 GameObject:
   m_ObjectHideFlags: 0
