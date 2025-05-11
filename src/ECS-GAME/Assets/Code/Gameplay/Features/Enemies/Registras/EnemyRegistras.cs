@@ -13,18 +13,17 @@ namespace Code.Gameplay.Features.Enemies.Registras
         
         private GameEntity _entity;
 
-        /*private void Awake()
+        private void Awake()
         {
             _entity = CreateEntity.Empty()
+                .AddEnemyTypeId(EnemyTypeId.Goblin)
                 .AddTransform(transform)
                 .AddWorldPosition(transform.position)
                 .AddDirection(Vector2.zero)
                 .AddSpeed(Speed)
                 .AddEnemyAnimator(EnemyAnimator)
-                .AddSpriteRenderer(EnemyAnimator.SpriteRenderer)
-                .AddTarget(PlayerTransform)
-                .With(x => x.isHero = true)
+                .With(x => x.isTurnedAlongDirection = true)
                 .With(x => x.isEnemy = true);
-        }*/
+        }
     }
 }

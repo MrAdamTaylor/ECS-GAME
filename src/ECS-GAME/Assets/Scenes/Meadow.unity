@@ -45849,6 +45849,10 @@ PrefabInstance:
       value: goblin_torch_blue
       objectReference: {fileID: 0}
     - target: {fileID: 5616006284858172826, guid: 5aa0f6aecef0da643b3ff98e1dc91c2e, type: 3}
+      propertyPath: Speed
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5616006284858172826, guid: 5aa0f6aecef0da643b3ff98e1dc91c2e, type: 3}
       propertyPath: EnemyAnimator
       value: 
       objectReference: {fileID: 1713380712}

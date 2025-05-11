@@ -14,7 +14,7 @@ public static class GameComponentsLookup {
     public const int WorldPosition = 3;
     public const int Enemy = 4;
     public const int EnemyAnimator = 5;
-    public const int Target = 6;
+    public const int EnemyTypeId = 6;
     public const int Hero = 7;
     public const int HeroAnimator = 8;
     public const int Direction = 9;
@@ -33,7 +33,7 @@ public static class GameComponentsLookup {
         "WorldPosition",
         "Enemy",
         "EnemyAnimator",
-        "Target",
+        "EnemyTypeId",
         "Hero",
         "HeroAnimator",
         "Direction",
@@ -51,7 +51,7 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Common.WorldPosition),
         typeof(Code.Gameplay.Features.Enemies.Enemy),
         typeof(Code.Gameplay.Features.Enemies.EnemyAnimatorComponent),
-        typeof(Code.Gameplay.Features.Enemies.TargetComponent),
+        typeof(Code.Gameplay.Features.Enemies.EnemyTypeIdComponent),
         typeof(Code.Gameplay.Features.Hero.Hero),
         typeof(Code.Gameplay.Features.Hero.HeroAnimatorComponent),
         typeof(Code.Gameplay.Features.Movement.Direction),
