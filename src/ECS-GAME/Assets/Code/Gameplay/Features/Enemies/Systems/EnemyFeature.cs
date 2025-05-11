@@ -1,10 +1,12 @@
+using Code.Infrastructure.Systems;
+
 namespace Code.Gameplay.Features.Enemies.Systems
 {
     public class EnemyFeature : Feature
     {
-        public EnemyFeature(GameContext gameContext)
+        public EnemyFeature(ISystemFactory systemFactory)
         {
-            Add(new ChaseHeroSystem(gameContext));
+            Add(systemFactory.Create<ChaseHeroSystem>());
         }
     }
 }
