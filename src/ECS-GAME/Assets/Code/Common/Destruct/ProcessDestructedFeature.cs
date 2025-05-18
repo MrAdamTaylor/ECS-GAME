@@ -6,6 +6,8 @@ namespace Code.Common.Destruct.Systems
     {
         public ProcessDestructedFeature(ISystemFactory systemFactory)
         {
+            Add(systemFactory.Create<SelfDestructTimerSystem>());
+            
             Add(systemFactory.Create<CleanupGameDestructedViewSystem>());
             Add(systemFactory.Create<CleanupGameDestructedSystem>());
         }

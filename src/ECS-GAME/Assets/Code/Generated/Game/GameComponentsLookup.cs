@@ -9,27 +9,29 @@
 public static class GameComponentsLookup {
 
     public const int Destructed = 0;
-    public const int View = 1;
-    public const int Id = 2;
-    public const int SpriteRenderer = 3;
-    public const int Transform = 4;
-    public const int WorldPosition = 5;
-    public const int Enemy = 6;
-    public const int EnemyAnimator = 7;
-    public const int EnemyTypeId = 8;
-    public const int Hero = 9;
-    public const int HeroAnimator = 10;
-    public const int Direction = 11;
-    public const int Moving = 12;
-    public const int Speed = 13;
-    public const int TurnedAlongDirection = 14;
-    public const int AxisInput = 15;
-    public const int Input = 16;
+    public const int SelfDestructTimer = 1;
+    public const int View = 2;
+    public const int Id = 3;
+    public const int SpriteRenderer = 4;
+    public const int Transform = 5;
+    public const int WorldPosition = 6;
+    public const int Enemy = 7;
+    public const int EnemyAnimator = 8;
+    public const int EnemyTypeId = 9;
+    public const int Hero = 10;
+    public const int HeroAnimator = 11;
+    public const int Direction = 12;
+    public const int Moving = 13;
+    public const int Speed = 14;
+    public const int TurnedAlongDirection = 15;
+    public const int AxisInput = 16;
+    public const int Input = 17;
 
-    public const int TotalComponents = 17;
+    public const int TotalComponents = 18;
 
     public static readonly string[] componentNames = {
         "Destructed",
+        "SelfDestructTimer",
         "View",
         "Id",
         "SpriteRenderer",
@@ -50,6 +52,7 @@ public static class GameComponentsLookup {
 
     public static readonly System.Type[] componentTypes = {
         typeof(Code.Common.Destructed),
+        typeof(Code.Common.SelfDestructTimer),
         typeof(Code.Common.View),
         typeof(Code.Gameplay.Common.Id),
         typeof(Code.Gameplay.Common.SpriteRendererComponent),
