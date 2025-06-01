@@ -3,6 +3,8 @@ using Code.Gameplay.Features.Enemies.Systems;
 using Code.Gameplay.Features.Hero.Systems;
 using Code.Gameplay.Features.Movement;
 using Code.Gameplay.Input.Systems;
+using Code.Gameplay.TargetCollection;
+using Code.Gameplay.TargetCollection.Systems;
 using Code.Infrastructure.Systems;
 
 namespace Code.Gameplay
@@ -15,6 +17,7 @@ namespace Code.Gameplay
             Add(systemFactory.Create<HeroFeature>());
             Add(systemFactory.Create<InputFeature>());
             Add(systemFactory.Create<EnemyFeature>());
+            Add(systemFactory.Create<CollectTargetsFeature>());
             Add(systemFactory.Create<ProcessDestructedFeature>());
         }
     }
