@@ -1,4 +1,5 @@
 using Code.Common.Destruct.Systems;
+using Code.Gameplay.Features.DamageApplication;
 using Code.Gameplay.Features.Enemies.Systems;
 using Code.Gameplay.Features.Hero.Systems;
 using Code.Gameplay.Features.Movement;
@@ -18,6 +19,7 @@ namespace Code.Gameplay
             Add(systemFactory.Create<InputFeature>());
             Add(systemFactory.Create<EnemyFeature>());
             Add(systemFactory.Create<CollectTargetsFeature>());
+            Add(systemFactory.Create<DamageApplicationFeature>());
             Add(systemFactory.Create<ProcessDestructedFeature>());
         }
     }

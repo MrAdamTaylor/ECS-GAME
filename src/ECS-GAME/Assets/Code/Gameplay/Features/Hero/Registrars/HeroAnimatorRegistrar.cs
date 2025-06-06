@@ -9,12 +9,18 @@ namespace Code.Gameplay.Features.Hero
         
         public override void RegisterComponents()
         {
-            Entity.AddHeroAnimator(HeroAnimatorComponent);
+            Entity
+                .AddHeroAnimator(HeroAnimatorComponent)
+                .AddDamageTakenAnimator(HeroAnimatorComponent);
         }
 
         public override void UnregisterComponents()
         {
-            Entity.RemoveHeroAnimator();
+            if(Entity.hasHeroAnimator)
+                Entity.RemoveHeroAnimator();
+            
+            if(Entity.hasDamageTakenAnimator)
+                Entity.RemoveDamageTakenAnimator();
         }
     }
 }
