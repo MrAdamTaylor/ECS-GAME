@@ -2,12 +2,12 @@ using Entitas;
 
 namespace Code.Gameplay.Features.Enemies.Systems
 {
-    public class ChaseHeroSystem : IExecuteSystem
+    public class EnemyChaseHeroSystem : IExecuteSystem
     {
         private readonly IGroup<GameEntity> _enemies;
         private readonly IGroup<GameEntity> _heroes;
 
-        public ChaseHeroSystem(GameContext gameContext)
+        public EnemyChaseHeroSystem(GameContext gameContext)
         {
             _enemies = gameContext.GetGroup(GameMatcher.AllOf(
                 GameMatcher.Enemy, 

@@ -15,6 +15,7 @@ namespace Code.Gameplay.Features.Movement.Systems
             _movers = gameContext.GetGroup(GameMatcher.AllOf(
                 GameMatcher.WorldPosition,
                 GameMatcher.Speed,
+                GameMatcher.MovementAvailable,
                 GameMatcher.Direction,
                 GameMatcher.Moving
             ));

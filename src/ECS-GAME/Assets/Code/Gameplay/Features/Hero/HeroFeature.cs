@@ -8,10 +8,11 @@ namespace Code.Gameplay.Features.Hero.Systems
         public HeroFeature(ISystemFactory systemFactory)
         {
             Add(systemFactory.Create<SetHeroDirectionByInputSystem>());
-            
             Add(systemFactory.Create<CameraFollowHeroSystem>());
-
             Add(systemFactory.Create<AnimateHeroMovementSystem>());
+            Add(systemFactory.Create<HeroDeathSystem>());
+
+            Add(systemFactory.Create<FinalizeHeroDeathProcessingSystem>());
         }
     }
 }

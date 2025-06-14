@@ -19,6 +19,7 @@ namespace Code.Gameplay.Features.Hero
                 .AddCurrentHP(MaxHP)
                 .AddMaxHP(MaxHP)
                 .With(x => x.isHero = true)
+                .With(x => x.isMovementAvailable = true)
                 .With(x => x.isTurnedAlongDirection = true);
         }
 
