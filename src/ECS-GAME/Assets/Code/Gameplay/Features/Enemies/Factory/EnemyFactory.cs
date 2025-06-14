@@ -42,6 +42,7 @@ namespace Code.Gameplay.Features.Enemies.Factory
                 .AddCollectTargetInterval(0.5f)
                 .AddCollectTargetsTimer(0)
                 .AddLayerMask(CollisionLayer.Hero.AsMask())
+                .AddViewPath("Gameplay/Enemies/enemyBase")
                 .With(x => x.isTurnedAlongDirection = true)
                 .With(x => x.isMovementAvailable = true)
                 .With(x => x.isEnemy = true);
