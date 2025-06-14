@@ -8,17 +8,17 @@
 //------------------------------------------------------------------------------
 public sealed partial class GameMatcher {
 
-    static Entitas.IMatcher<GameEntity> _matcherRadius;
+    static Entitas.IMatcher<GameEntity> _matcherViewPath;
 
-    public static Entitas.IMatcher<GameEntity> Radius {
+    public static Entitas.IMatcher<GameEntity> ViewPath {
         get {
-            if (_matcherRadius == null) {
-                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.Radius);
+            if (_matcherViewPath == null) {
+                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.ViewPath);
                 matcher.componentNames = GameComponentsLookup.componentNames;
-                _matcherRadius = matcher;
+                _matcherViewPath = matcher;
             }
 
-            return _matcherRadius;
+            return _matcherViewPath;
         }
     }
 }
@@ -33,28 +33,28 @@ public sealed partial class GameMatcher {
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    public Code.Common.Radius radius { get { return (Code.Common.Radius)GetComponent(GameComponentsLookup.Radius); } }
-    public float Radius { get { return radius.Value; } }
-    public bool hasRadius { get { return HasComponent(GameComponentsLookup.Radius); } }
+    public Code.Common.ViewPath viewPath { get { return (Code.Common.ViewPath)GetComponent(GameComponentsLookup.ViewPath); } }
+    public string ViewPath { get { return viewPath.Value; } }
+    public bool hasViewPath { get { return HasComponent(GameComponentsLookup.ViewPath); } }
 
-    public GameEntity AddRadius(float newValue) {
-        var index = GameComponentsLookup.Radius;
-        var component = (Code.Common.Radius)CreateComponent(index, typeof(Code.Common.Radius));
+    public GameEntity AddViewPath(string newValue) {
+        var index = GameComponentsLookup.ViewPath;
+        var component = (Code.Common.ViewPath)CreateComponent(index, typeof(Code.Common.ViewPath));
         component.Value = newValue;
         AddComponent(index, component);
         return this;
     }
 
-    public GameEntity ReplaceRadius(float newValue) {
-        var index = GameComponentsLookup.Radius;
-        var component = (Code.Common.Radius)CreateComponent(index, typeof(Code.Common.Radius));
+    public GameEntity ReplaceViewPath(string newValue) {
+        var index = GameComponentsLookup.ViewPath;
+        var component = (Code.Common.ViewPath)CreateComponent(index, typeof(Code.Common.ViewPath));
         component.Value = newValue;
         ReplaceComponent(index, component);
         return this;
     }
 
-    public GameEntity RemoveRadius() {
-        RemoveComponent(GameComponentsLookup.Radius);
+    public GameEntity RemoveViewPath() {
+        RemoveComponent(GameComponentsLookup.ViewPath);
         return this;
     }
 }
